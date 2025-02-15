@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "nodemon --ext ts --exec ts-node src/server.ts",
-		"build": "tsc",
+		"build": "pnpm install && tsc",
 		"start": "node dist/server.js",
 		"lint": "eslint 'src/**/*.{ts,tsx}' --fix",
 		"format": "prettier --write 'src/**/*.{ts,tsx}'"
