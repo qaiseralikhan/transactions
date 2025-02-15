@@ -1,5 +1,5 @@
 import swaggerJSDoc, { Options } from 'swagger-jsdoc';
-import { PORT } from '../utils/constants';
+import { BASE_URL } from '../utils/constants';
 import swaggerUi from 'swagger-ui-express';
 
 const options: Options = {
@@ -12,7 +12,7 @@ const options: Options = {
     },
     servers: [
       {
-        url: process.env.NEXT_PUBLIC_API_URL || `http://localhost:${PORT}`, // Fallback to local if not set
+        url: BASE_URL, // Fallback to local if not set
       },
     ],
   },
